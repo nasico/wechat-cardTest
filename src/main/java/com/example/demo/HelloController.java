@@ -45,13 +45,31 @@ public class HelloController {
 	
 
 	/**
-	 *  配置成功后将接口改为接收回调推送的接口
+	 *  配置成功后将接口改为接收回调推送的接口 
+	 *  https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1451025274
 	 * @param notifyData
 	 * @return
 	 */
 	@RequestMapping("wechat/signature")
 	public void signature(@RequestBody String notifyData) {
 		System.out.println(notifyData);
+		//将回调信息中需要的数据保存到本地
+//		<xml><ToUserName><![CDATA[gh_e7aa45ab139d]]></ToUserName>
+//		<FromUserName><![CDATA[ohW_H1VGxe6QVt0w4jvyJ8Lv4XtQ]]></FromUserName>
+//		<CreateTime>1558968863</CreateTime>
+//		<MsgType><![CDATA[event]]></MsgType>
+//		<Event><![CDATA[user_get_card]]></Event>
+//		<CardId><![CDATA[phW_H1XI2M1nm6dUoINLxUUzzZy8]]></CardId>
+//		<IsGiveByFriend>0</IsGiveByFriend>
+//		<UserCardCode><![CDATA[927983162925]]></UserCardCode>
+//		<FriendUserName><![CDATA[]]></FriendUserName>
+//		<OuterId>0</OuterId>
+//		<OldUserCardCode><![CDATA[]]></OldUserCardCode>
+//		<IsRestoreMemberCard>0</IsRestoreMemberCard>
+//		<IsRecommendByFriend>0</IsRecommendByFriend>
+//		<SourceScene><![CDATA[SOURCE_SCENE_UNKNOW]]></SourceScene>
+//		<UnionId><![CDATA[oAAAAAHbl9CwWJLFKEIkJhOKd1Pg]]></UnionId>
+//		</xml>
 	}
 
 
